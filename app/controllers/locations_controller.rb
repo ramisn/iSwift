@@ -9,9 +9,9 @@ class LocationsController < ApplicationController
       key = ENV["ZIP_KEY"].to_s
       zip1 = params[:zip1]
       zip2 = params[:zip2]
-      url = 'http://www.zipcodeapi.com/rest/'+key+'/distance.csv/'+zip1+'/'+zip2+'/km'
+      url = 'http://www.zipcodeapi.com/rest/'+key+'/distance.csv/'+zip1+'/'+zip2+'/mile'
       @data = Curl.get(url)
-      format.html { render html: @data.body_str}
+      format.html { render html: @data.body_str + 'Miles'}
     end
   end
 
