@@ -1,0 +1,24 @@
+<%= form_tag({:action => 'index'},:multipart => true) %>
+  <table width="450px">
+  <tr>
+   <td valign="top">
+    <label for="zip1">ZIP Code 2</label>
+   </td>
+   <td valign="top">
+    <input  type="text" name="zip1" maxlength="50" size="30">
+   </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    <label for="zip2">ZIP Code 2</label>
+   </td>
+   <td valign="top">
+    <input  type="text" name="zip2" maxlength="50" size="30">
+   </td>
+  </tr>
+  <td valign="top">
+    <%= submit_tag "Get Distance"%>
+   </td>
+  </tr>
+  </table>
+</form>
